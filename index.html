@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-dog.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#4414ab" />
+    <meta name="author" content="Sean Ockert seanockert.com" />
+    <meta name="description" content="Find pictures of dogs by breed" />
+    <title>Dog Breeds - Microba Assessment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- Preconnect to the domain that serves dog images to improve loading speed -->
+    <link rel="dns-prefetch" href="https://images.dog.ceo" />
+    <link rel="preconnect" href="https://images.dog.ceo" crossorigin />
+    <style>
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .loading {
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+      }
+      .spinner {
+        animation: spinner 0.75s infinite linear;
+        -webkit-animation: spinner 0.75s infinite linear;
+        transform-origin: center;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>Please enable Javascript.</noscript>
+    <div id="app">
+      <div class="loading">
+        <svg width="32" height="32" viewBox="0 0 24 24">
+          <title>Loading...</title>
+          <path
+            fill="currentColor"
+            d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"
+            class="spinner" />
+        </svg>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
